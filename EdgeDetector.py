@@ -62,7 +62,7 @@ while(cap.isOpened()):
         width = frame.shape[1]
         # to make things easier we convert to gray
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        # use a thresholding technique called canny
+        # use a canny filter to transform the image into edges
         edges = cv2.Canny(gray,100,200)
         # focus on the region of interest
         roi = region_of_interest(edges)
